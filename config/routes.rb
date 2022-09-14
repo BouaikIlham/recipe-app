@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :users
 
-  root to: 'home#index'
+  root to: 'users#index'
 end
