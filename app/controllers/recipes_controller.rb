@@ -2,5 +2,9 @@ class RecipesController < ApplicationController
 
     def index
         @recipes = current_user.recipes
-      end   
+    end   
+
+    def new
+        @recipe = Recipe.new
+    end
 end
