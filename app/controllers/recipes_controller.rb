@@ -19,5 +19,17 @@ class RecipesController < ApplicationController
             end
           end
         end
+    end
+
+    def destroy
+        respond_to do |format|
+          format.html do
+            if @recipe.destroy
+              redirect_to recipes_path, notice: 'Recipe deleted successfully'
+            else
+              redirect_to recipes_path, alert: 'Error, Recipe not deleted!'
+            end
+          end
+        end
       end
 end
