@@ -43,3 +43,8 @@ table {
   margin-top: 20px;
   border: 10px;
 }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
