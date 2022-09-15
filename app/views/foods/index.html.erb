@@ -1,5 +1,5 @@
 <section class="foods">
-<div>
+<div class="button">
     <button class="btn">Add food</button>
 </div>
 
@@ -15,7 +15,7 @@
   <tr>
     <td><%= food.name%></td>
     <td><%= food.measurement_unit%></td>
-    <td><p>$</p><%= food.price %></td>
+    <td><span>$</span><%= food.price %></td>
     <td>Delete</td>
   </tr>
   <% end%>

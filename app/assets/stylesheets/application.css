@@ -17,4 +17,29 @@ table,
 th,
 td {
   border: 1px solid black;
+  text-align: center;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  font-size: 30px;
+  cursor: pointer;
+  border: 3px solid;
+  background: white;
+}
+
+.listFood {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+}
+
+table {
+  width: 80%;
+  margin-top: 20px;
+  border: 10px;
 }
