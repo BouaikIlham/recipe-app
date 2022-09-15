@@ -8,7 +8,6 @@ class Recipes < ActiveRecord::Migration[7.0]
       t.string :cooking_time
       t.text :description
       t.boolean :public
-      t.integer :user_id
     end
   end
 end
