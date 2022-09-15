@@ -1,0 +1,25 @@
+<section class="foods">
+<div class="button">
+    <button class="btn">Add food</button>
+</div>
+
+<div class="listFood">
+<table class="table">
+  <tr>
+    <th>Food</th>
+    <th>measurement unit</th>
+    <th>Unit price</th>
+    <th>Actions</th>
+  </tr>
+  <% @foods.each do |food| %>
+  <tr>
+    <td><%= food.name%></td>
+    <td><%= food.measurement_unit%></td>
+    <td><span>$</span><%= food.price %></td>
+    <td>Delete</td>
+  </tr>
+  <% end%>
+</table>
+</div>
+
+</section>
