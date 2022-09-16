@@ -8,23 +8,27 @@ class FoodsController < ApplicationController
     @food = Food.new
   end
 
-def create
-  @food = Food.new(food_params)
 
+
+  def create 
+    @food = Food.new(food_params)
     respond_to do |format|
       if @food.save
-        format.html { redirect_to artical_url(@food), notice: "Food was successfully created." }
+        format.html { redirect_to food_url(@food), notice: "Food was successfully created." }
         format.json { render :show, status: :created, location: @food }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @food.errors, status: :unprocessable_entity }
       end
     end
-end
+  end
 
 
 
-private
+
+
+
+ private  
 
 def food_params
   params.require(:food).permit(:name, :measurement_unit, :price)
