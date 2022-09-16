@@ -1,3 +1,4 @@
+<section class="form">
 <h1>New Food</h1>
 <%= form_with(model: @food) do |form| %>
   <% if @food.errors.any? %>
@@ -26,10 +27,8 @@
    <%= form.label :price, style: "display: block"%> 
    <%= form.text_field :price, style: "display: block"%>
   </div>
-
- 
-
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+</section>
