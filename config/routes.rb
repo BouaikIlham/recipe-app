@@ -17,5 +17,4 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :new, :create, :show, :destroy]
   resources :public_recipes, only: [:index]
   resources :general_shopping_list, only: [:index]
-
-end
+  root to: 'home#index'
