@@ -18,3 +18,4 @@ Rails.application.routes.draw do
   resources :public_recipes, only: [:index]
   resources :general_shopping_list, only: [:index]
   root to: 'home#index'
+end
