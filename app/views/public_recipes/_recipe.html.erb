@@ -1,12 +1,9 @@
-<div class="container">
-    <h1>Public Recipes</h1>
-    <% @public_recipes.each do |recipe|%>
-    <div class="card p-3 row mb-3">
-    <div class="col">
+<div class="card p-3 row mb-3">
+  <div class="col">
     <h2><%= link_to recipe.name, recipe %></h2>
     <p>By: <%= recipe.user.name %></p>
-    </div>
-    <div class="col">
+  </div>
+  <div class="col">
       <p>Total food items:<%= recipe.recipe_foods.size%></p>
       <p>Total price:
       <% recipe.recipe_foods.each do |recipe_food| %>
@@ -15,8 +12,5 @@
       <%end%>
       <%= @price %>
       <p>
-    </div>
-    </div>
-    <%end%>
-
+  </div>
 </div>
