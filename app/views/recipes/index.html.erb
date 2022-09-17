@@ -16,7 +16,7 @@
     <li>
       <div>
         <%= link_to recipe.name, recipe_path(recipe.id) %>
-        <%= link_to "Remove", recipe_path(recipe.id), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+        <%= button_to "Delete", recipe, method: :delete%>
       </div>
       <article><%= recipe.description %></article>
     </li>
