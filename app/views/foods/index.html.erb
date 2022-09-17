@@ -1,6 +1,6 @@
 <section class="foods">
 <div class="button">
-    <button class="btn">Add food</button>
+    <button class="btn"><%= link_to "Add Food", new_food_path(@food)%></button>
 </div>
 
 <div class="listFood">
@@ -16,7 +16,7 @@
     <td><%= food.name%></td>
     <td><%= food.measurement_unit%></td>
     <td><span>$</span><%= food.price %></td>
-    <td>Delete</td>
+    <td><%= button_to "Delete", food, method: :delete%></td>
   </tr>
   <% end%>
 </table>
