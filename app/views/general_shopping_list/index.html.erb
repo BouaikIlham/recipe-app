@@ -1,0 +1,28 @@
+<div>
+<h1>Shopping List</h1>
+<div>
+  <h4>Amount of food Items to buy: <%= @foods.size %> </h4>
+  <h4>Total value of food needed: $<%= @total %></h4>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Food</th>
+      <th>Quantity</th>
+      <th> Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @foods.each do | food | %>
+    <% qty=RecipeFood.joins(:food).where(food_id: food.id).sum( 'quantity') %>
+    <tr>
+      <th >
+        <%= food.name %>
+      </th>
+      <td> <%= qty %> <%= food.measurement_unit %> </td>
+      <td> $<%= food.price %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
